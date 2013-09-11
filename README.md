@@ -14,12 +14,12 @@ Build Script to wrap compiled closure-code into an AMD/UMD module.
 
 ### :warning: Don't Hurt Yourself...
 
-The file-size cost of including even a few closure-library modules/"classes" can be very high depending on what you include. Make sure you know what you are doing and perhaps consider using the closure library to build your application.
+This was more of an experiment than anything else. There are probably many ways this process could easily get out of hand (duplication of functionality, file size, etc). That said, use at your own discretion.
 
 
 ### Background
 
-I wanted to try [closure-library's userAgent](http://docs.closure-library.googlecode.com/git/closure_goog_useragent_useragent.js.html) in a requirejs project, but didn't see an easy way to make this happen. This is my solution in a reusable format. I did noticed an [output_wrapper](https://code.google.com/p/closure-compiler/wiki/FAQ#When_using_Advanced_Optimizations,_Closure_Compiler_adds_new_var) option for the closure compiler, but could not get it to work with the [Service API](https://developers.google.com/closure/compiler/docs/api-ref).
+I wanted to try [closure-library's userAgent](http://docs.closure-library.googlecode.com/git/closure_goog_useragent_useragent.js.html) in a requirejs project. This was the method I came up with to allow any closure-library "class" to be used as AMD. However, In the end, I chose a smaller AMD library that better fit my needs. 
 
 ### Closure Library
 
